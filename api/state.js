@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     const r = await fetch(url, {
       ...init,
       headers: {
-        'Authorization': `Bearer ${GH_TOKEN}`,
+        'Authorization': `token ${GH_TOKEN}`,
         'User-Agent': 'vac-tracker',
         'Content-Type': 'application/json',
         ...(init.headers || {})
